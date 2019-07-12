@@ -1,0 +1,20 @@
+body {
+    background-image: url("../images/blackskulls.jpg");
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 18px;
+}
+
+.content {
+    margin: 0 auto 0 auto;
+    width: 960px;
+
+}
+
+/* not working yet */
+.jombotron {
+    background-color: #6db3c4;
+}
+
+.card-header {
+    background-color: #d6f3fa;
+}

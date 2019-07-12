@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- reset -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <div class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="jumbotron">
+                    <h1 class="display-4">Tim Burton Movies Hangman!</h1>
+                    <p class="lead">Can you guess the Tim Burton movie? </p>
+                    <hr class="my-4">
+                    <p>It uses utility classes for typography and spacing to space content out within the larger
+                        container.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">
+                        Guess the Movie
+                    </div>
+                    <div class="card-body">
+                        <h3>_ _ _ _ _ _ _ _ _ </h3>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        Letters Guessed
+                    </div>
+                    <div class="card-body">
+                        <h3 id="usedLetters">placeholder</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        Games Won
+                    </div>
+                    <div class="card-body">
+                        <h3 id="wins">placeholder</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        Games Lost
+                    </div>
+                    <div class="card-body">
+                        <h3 id="losses">placeholder</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card" style="width: 465px;">
+                    <img src="assets/images/black-and-white-cold-fog-235621 (1).jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text" id="movieTitle">Movie Title</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
