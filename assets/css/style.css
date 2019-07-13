@@ -7,14 +7,15 @@ body {
 .content {
     margin: 0 auto 0 auto;
     width: 960px;
-
+    padding-bottom: 60px;
 }
 
-/* not working yet */
-.jombotron {
-    background-color: #6db3c4;
+/* jumbotron color change */
+.color {
+    background-color: #c6c3de;
 }
 
+/* card header color change */
 .card-header {
     background-color: #d6f3fa;
 }
