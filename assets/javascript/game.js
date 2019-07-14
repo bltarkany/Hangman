@@ -93,6 +93,7 @@ function restartGame() {
     guessesLeft = 10;
     lettersWrong = [];
 
+    movieName.textContent = "Movie Title";
     usedLetters.textContent = lettersWrong.join(" ");
     turnsLeft.textContent = guessesLeft;
     winScore.textContent = winCount;
