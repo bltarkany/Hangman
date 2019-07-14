@@ -28,13 +28,13 @@
             <div class="col-sm-12">
                 <!-- game title and instructions -->
                 <div class="jumbotron color">
-                    <h1 class="display-4">Tim Burton Movies Hangman!</h1>
+                    <h1 class="display-4">Tim Burton Movie Characters Hangman!</h1>
                     <p class="lead">Can you guess the Tim Burton movie? </p>
                     <hr class="my-4">
                     <p>Guess the letters of the movie title. You will have 10 turns. Guess a letter correctly and you
                         recieve a free turn. Guess incorreclty and you lose a turn. If you guess the movie title
                         correctly a surprise will appear. If you are unable to guess the movie title you've lost. Press
-                        any key to begin.  </p>
+                        any key to begin. </p>
                 </div>
             </div>
         </div>
@@ -90,12 +90,17 @@
             <div class="col-sm-6">
                 <!-- movie picture and title -->
                 <div class="card" style="width: 465px;">
-                    <img src="assets/images/blackandwhite.jpg" class="card-img-top" id="image"
-                        alt="...">
+                    <img src="assets/images/blackandwhite.jpg" class="card-img-top" id="image" alt="...">
                     <div class="card-body">
-                        <p class="card-text" id="movieTitle">Movie Title</p>
+                        <p class="card-text" id="title">Movie Title</p>
                     </div>
                 </div>
+                <div class="card">
+                    <div class="card-body" id="outcome">
+
+                    </div>
+                </div>
+                <div id="audioByte"></div>
             </div>
         </div>
 

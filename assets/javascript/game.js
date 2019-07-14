@@ -1,6 +1,6 @@
 // Global Variables
 // ======================================================================
-// var userOptions = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
 var movies = ["jack", "edward", "sweeney", "beetlejuice", "lydia", "bonejangles", "ichabod", "frankenweenie", "sally", "batman", "wonka", "oogieboogie"];
 var compGuess = "";
 
@@ -32,7 +32,8 @@ var winScore = document.getElementById("wins");
 var lossScore = document.getElementById("losses");
 var moviePic = document.getElementById("image");
 var turnsLeft = document.getElementById("turns");
-
+var gameOutcome = document.getElementById("outcome");
+var movieName = document.getElementById("title")
 
 
 // Global Functions
@@ -53,13 +54,13 @@ function startGame() {
 
     // reset game counters
     guessesLeft = 10;
-    lettersGuessed = [];
+    lettersWrong = [];
 
-    usedLetters.textContent = lettersGuessed.join(" ");
+    usedLetters.textContent = lettersWrong.join(" ");
     turnsLeft.textContent = guessesLeft;
     winScore.textContent = winCount;
     lossScore.textContent = lossCount;
-    moviePic.setAttribute("src", "assets/images/blackandwhite.jpg");
+    // moviePic.setAttribute("src", "assets/images/blackandwhite.jpg");
 
     // console log actions
     console.log(titleSplit);
@@ -85,12 +86,13 @@ function restartGame() {
     winCount = 0;
     lossCount = 0;
     guessesLeft = 10;
-    lettersGuessed = [];
+    lettersWrong = [];
 
-    usedLetters.textContent = lettersGuessed.join(" ");
+    usedLetters.textContent = lettersWrong.join(" ");
     turnsLeft.textContent = guessesLeft;
     winScore.textContent = winCount;
     lossScore.textContent = lossCount;
+    gameOutcome.textContent = "";
     moviePic.setAttribute("src", "assets/images/blackandwhite.jpg");
 
     // console log actions
@@ -104,7 +106,7 @@ function restartGame() {
 function movieTitle() {
 
     compGuess = movies[Math.floor(Math.random() * movies.length)];
-
+    blanksAndLetters = [];
 
 
     console.log(compGuess);
@@ -119,9 +121,10 @@ function letterChecker(letter) {
     // look to see if user letter choice is in game word. If so letterFound is now true
     for (var i = 0; i < numBlanks; i++) {
 
-        if (compGuess[i] === letter);
+        if (compGuess[i] === letter) {
 
-        letterFound = true;
+            letterFound = true;
+        };
     }
 
     // If letterfound is true, find where the true letters are and put them into the blanksandletters
@@ -142,9 +145,9 @@ function letterChecker(letter) {
 
         guessesLeft--;
 
-        lettersGuessed.push(letter);
+        lettersWrong.push(letter);
 
-        console.log(lettersGuessed);
+        console.log(lettersWrong);
     }
 }
 
@@ -158,15 +161,79 @@ function letterChecker(letter) {
 // Game Logic
 // ============================================================================
 
-document.onkeyup = function(event) {
+document.onkeyup = function (event) {
 
     lettersGuessed = String.fromCharCode(event.which).toLowerCase();
 
     letterChecker(lettersGuessed);
 
+    if (titleSplit.toString() === blanksAndLetters.toString()) {
+
+        gameOutcome.textContent = "You won!! Let's play again!"
+        winCount++;
+
+        if (compGuess === "beetlejuice") {
+            moviePic.setAttribute("src", "assets/images/betleljuice-f.jpg");
+            movieName.textContent = "Beetlejuice!";
+        } else if (compGuess === "jack") {
+            moviePic.setAttribute("src", "assets/images/jack.gif");
+            movieName.textContent = "Nightmare Before Christmas!";
+        } else if (compGuess === "sally") {
+            moviePic.setAttribute("src", "assets/images/sally.gif");
+            movieName.textContent = "Nightmare Before Christmas!";
+        } else if (compGuess === "batman") {
+            moviePic.setAttribute("src", "assets/images/batman.jpg");
+            movieName.textContent = "Batman!";
+        } else if (compGuess === "edward") {
+            moviePic.setAttribute("src", "assets/images/edward.jpg");
+            movieName.textContent = "Edward Scissorhands!";
+        } else if (compGuess === "frankenweenie") {
+            moviePic.setAttribute("src", "assets/images/frank.jpg");
+            movieName.textContent = "Frankenweenie!";
+        } else if (compGuess === "sweeney") {
+            moviePic.setAttribute("src", "assets/images/SweeneyTodd.jpg");
+            movieName.textContent = "Sweeney Todd!";
+        } else if (compGuess === "lydia") {
+            moviePic.setAttribute("src", "assets/images/lydia.jpg");
+            movieName.textContent = "Beetlejuice!";
+        } else if (compGuess === "bonejangles") {
+            moviePic.setAttribute("src", "assets/images/bone.jpg");
+            movieName.textContent = "Corpse Bride!";
+        } else if (compGuess === "ichabod") {
+            moviePic.setAttribute("src", "assets/images/ichabod.jpg");
+            movieName.textContent = "Sleepy Hollow!";
+        } else if (compGuess === "wonka") {
+            moviePic.setAttribute("src", "assets/images/wonka.jpg");
+            movieName.textContent = "Willy Wonka and the Chocolate Factory!";
+        } else if (compGuess === "oogieboogie") {
+            moviePic.setAttribute("src", "assets/images/oogie.jpg");
+            movieName.textContent = "Nightmare Before Christmas!";
+        }
+
+        movieTitle();
+        startGame();
+    } else if (guessesLeft === 0) {
+
+        gameOutcome.textContent = "You Lost! Try harder this time!"
+        lossCount++;
+
+        movieTitle();
+        startGame();
+    }
+
+    if (lossCount === 10) {
+
+        gameOutcome.textContent = "You've lost to many times. Time to restart the score board!"
+
+        movieTitle();
+        restartGame();
+    }
+
+
+
 
     gameMovie.textContent = blanksAndLetters.join(" ");
-    usedLetters.textContent = lettersGuessed.join(" ");
+    usedLetters.textContent = lettersWrong.join(" ");
     turnsLeft.textContent = guessesLeft;
     winScore.textContent = winCount;
     lossScore.textContent = lossCount;
@@ -178,4 +245,4 @@ document.onkeyup = function(event) {
 
 movieTitle();
 startGame();
-letterChecker();
+// letterChecker();
