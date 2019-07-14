@@ -22,6 +22,10 @@ var guessesLeft = 10;
 var lettersGuessed = "";
 var lettersWrong = [];
 
+// audio files
+var audio1 = new Audio("assets/images/sleep.m4a");
+
+
 
 
 // documentation in to html
@@ -33,7 +37,8 @@ var lossScore = document.getElementById("losses");
 var moviePic = document.getElementById("image");
 var turnsLeft = document.getElementById("turns");
 var gameOutcome = document.getElementById("outcome");
-var movieName = document.getElementById("title")
+var movieName = document.getElementById("title");
+var audioList = document.getElementById("audio");
 
 
 // Global Functions
@@ -202,6 +207,7 @@ document.onkeyup = function (event) {
         } else if (compGuess === "ichabod") {
             moviePic.setAttribute("src", "assets/images/ichabod.jpg");
             movieName.textContent = "Sleepy Hollow!";
+            audio1.play();
         } else if (compGuess === "wonka") {
             moviePic.setAttribute("src", "assets/images/wonka.jpg");
             movieName.textContent = "Willy Wonka and the Chocolate Factory!";
