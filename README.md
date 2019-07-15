@@ -1,3 +1,15 @@
+# This project was used to solidify Javascript components
+  1. documenting to the html.
+  2. global variables
+  3. global functions
+  4. onkeyup functions
+  5. setting attributes
+  
+# GitHub Repo
+allowed for continually progression and use of github. Storing multiple updates to watch the progression of the project.
+
+
+
 # Word-Guess-Game
 Before You Begin
 
@@ -68,10 +80,6 @@ Don't forget to place your global variables and functions above your object.
 Remember: global variables, then objects, then calls.
 
 
-Definitely talk with a TA or your instructor if you get tripped up during this challenge.
-
-
-
 
 
 A Few Tips
@@ -114,49 +122,3 @@ Always commit your work and back it up with GitHub pushes. You don't want to los
 
 Commit often.
 
-
-
-Turn in anything you have! Even if you don't finish, we still want to see what you were able to accomplish in the time we gave you. This will help us know what concepts we could help you with, as well as what topics we should focus on in the coming lectures.
-
-
-
-Reminder: Submission on BCS
-
-
-Please submit both the deployed Github.io link to your homework AND the link to the Github Repository!
-
-
-
-
-
-Minimum Requirements
-
-Attempt to complete homework assignment as described in instructions. If unable to complete certain portions, please pseudocode these portions to describe what remains to be completed. Adding a README.md as well as adding this homework to your portfolio are required as well and more information can be found below.
-
-
-
-
-Create a README.md
-
-Add a README.md to your repository describing the project. Here are some resources for creating your README.md. Here are some resources to help you along the way:
-
-
-About READMEs
-Mastering Markdown
-
-
-
-
-
-Add To Your Portfolio
-
-After completing the homework please add the piece to your portfolio. Make sure to add a link to your updated portfolio in the comments section of your homework so the TAs can easily ensure you completed this step when they are grading the assignment. To receive an 'A' on any assignment, you must link to it from your portfolio.
-
-
-
-
-One More Thing
-
-If you have any questions about this project or the material we have covered, please post them in the community channels in slack so that your fellow developers can help you! If you're still having trouble, you can come to office hours for assistance from your instructor and TAs.
-
-Good Luck!
