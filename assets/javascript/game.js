@@ -6,7 +6,7 @@ var compGuess = "";
 
 
 
-// word contanier
+// word container
 var titleSplit = [];
 var numBlanks = 0;
 // n _ _ _ _
