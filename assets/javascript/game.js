@@ -112,46 +112,29 @@ function movieTitle() {
 function letterChecker(letter) {
     // start with no letters correct because it is the start of game
     var letterFound = false;
-
     // look to see if user letter choice is in game word. If so letterFound is now true
     for (var i = 0; i < numBlanks; i++) {
-
         if (compGuess[i] === letter) {
-
             letterFound = true;
         };
     }
 
-    // If letter found is true, find where the true letters are and put them into the blanksandletters
+    // If letter found is true, find where the true letters are and put them into the blanks and letters
     if (letterFound) {
-
         for (var j = 0; j < numBlanks; j++) {
-
             if (compGuess[j] === letter) {
-
                 blanksAndLetters[j] = letter;
             }
-
             console.log(blanksAndLetters);
         }
-
-        // if letterfound stays false, remove a turn and put wrong guess into used letters
+        // if letter found stays false, remove a turn and put wrong guess into used letters
     } else {
-
         guessesLeft--;
-
         lettersWrong.push(letter);
 
         console.log(lettersWrong);
     }
 }
-
-
-
-
-
-
-
 
 // Game Logic
 // ============================================================================
@@ -225,20 +208,13 @@ document.onkeyup = function (event) {
         restartGame();
     }
 
-
-
-
     gameMovie.textContent = blanksAndLetters.join(" ");
     usedLetters.textContent = lettersWrong.join(" ");
     turnsLeft.textContent = guessesLeft;
     winScore.textContent = winCount;
     lossScore.textContent = lossCount;
-
-
 }
 
-
-
+// Game start function callback
 movieTitle();
 startGame();
-// letterChecker();
