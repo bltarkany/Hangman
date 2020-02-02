@@ -1,21 +1,19 @@
 // Global Variables
 // ======================================================================
 
-var movies = ["jack", "edward", "sweeney", "beetlejuice", "lydia", "bonejangles", "ichabod", "frankenweenie", "sally", "batman", "wonka", "oogieboogie"];
+var movies = ["jack", "edward", "sweeney", "beetlejuice", "lydia", "bonejangles", "ichabod", 
+"frankenweenie", "sally", "batman", "wonka", "oogieboogie"];
+
 var compGuess = "";
-
-
 
 // word container
 var titleSplit = [];
 var numBlanks = 0;
+
 // n _ _ _ _
 var blanksAndLetters = [];
 
-
-
 // game counters
-
 var winCount = 0;
 var lossCount = 0;
 var guessesLeft = 10;
@@ -25,11 +23,7 @@ var lettersWrong = [];
 // audio files
 var audio1 = new Audio("assets/images/sleep.m4a");
 
-
-
-
 // documentation in to html
-
 var gameMovie = document.getElementById("movieClass");
 var usedLetters = document.getElementById("letters");
 var winScore = document.getElementById("wins");
