@@ -12,10 +12,17 @@ This Project was used to solidify javascript components, including:
 
 ### Word Guess Game
 
+#### Demo Game Here
+
+   [Hangman](https://bltarkany.github.io/Hangman-Javascript/)
 
 
 
 ![Tim Burton Hangman](https://github.com/bltarkany/Hangman/blob/master/assets/images/gamepic.png)
+
+
+
+#### Instructions
 
 
 Choose a theme for your game! 
