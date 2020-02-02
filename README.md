@@ -1,4 +1,4 @@
-# Word-Guess-Game
+# Word-Guess-Game / Javascript 
 
 ### OverView
 
@@ -10,10 +10,12 @@ This Project was used to solidify javascript components, including:
   5. setting attributes
 
 
-### Word Guess Game (Challenge - Recommended)
+### Word Guess Game
 
 
-![Tim Burton Hangman]( https://github.com/bltarkany/Hangman/blob/master/assets/images/gamepic.png)
+
+
+![Tim Burton Hangman](https://github.com/bltarkany/Hangman/blob/master/assets/images/gamepic.png)
 
 
 Choose a theme for your game! 
