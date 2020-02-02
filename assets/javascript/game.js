@@ -54,7 +54,6 @@ function startGame() {
     // reset game counters
     guessesLeft = 10;
     lettersWrong = [];
-
     usedLetters.textContent = lettersWrong.join(" ");
     turnsLeft.textContent = guessesLeft;
     winScore.textContent = winCount;
@@ -65,7 +64,6 @@ function startGame() {
     console.log(titleSplit);
     console.log(numBlanks);
     console.log(blanksAndLetters);
-
 }
 
 // full restart of game
@@ -99,7 +97,6 @@ function restartGame() {
     console.log(titleSplit);
     console.log(numBlanks);
     console.log(blanksAndLetters);
-
 }
 
 // movie title selection 
@@ -108,12 +105,10 @@ function movieTitle() {
     compGuess = movies[Math.floor(Math.random() * movies.length)];
     blanksAndLetters = [];
 
-
     console.log(compGuess);
 }
 
 // check if user letter guesses are in mystery word
-
 function letterChecker(letter) {
     // start with no letters correct because it is the start of game
     var letterFound = false;
@@ -127,7 +122,7 @@ function letterChecker(letter) {
         };
     }
 
-    // If letterfound is true, find where the true letters are and put them into the blanksandletters
+    // If letter found is true, find where the true letters are and put them into the blanksandletters
     if (letterFound) {
 
         for (var j = 0; j < numBlanks; j++) {
