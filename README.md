@@ -17,7 +17,7 @@ This Project was used to solidify javascript components, including:
    [Hangman](https://bltarkany.github.io/Hangman-Javascript/)
 
 
-
+#### Game Play Theme
 ![Tim Burton Hangman](https://github.com/bltarkany/Hangman/blob/master/assets/images/gamepic.png)
 
 
@@ -57,7 +57,3 @@ Don't forget to place your global variables and functions above your object.
 
 
 Remember: global variables, then objects, then calls.
-
-
-
-
